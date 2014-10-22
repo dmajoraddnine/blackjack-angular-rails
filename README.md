@@ -19,6 +19,7 @@ echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc
 rvm install 2.1.3
 rvm use 2.1.3 --default
 ruby -v
+# ruby 2.1.3pxxx [...]
 ```
 
 - tell Rubygems not to install the documentation for each package locally
@@ -40,3 +41,21 @@ rails -v
 # Rails 4.1.6
 ```
 
+- install Postgres
+```
+sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
+wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install postgresql-common
+sudo apt-get install postgresql-9.3 libpq-dev
+psql --version
+# psql (PostgreSQL) 9.3.5
+```
+
+- set up Rails user/pass for Postgres
+```
+sudo -u postgres createuser rails -s
+sudo -u postgres psql
+postgres=# \password rails
+# enter new pass
+```
