@@ -34,7 +34,7 @@ sudo apt-get update
 sudo apt-get install nodejs
 ```
 
-- install Rails (and validate install)
+- install Rails
 ```
 gem install rails
 rails -v
