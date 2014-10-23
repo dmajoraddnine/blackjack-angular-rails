@@ -1,5 +1,5 @@
-minesweeper-angular-rails
-=========================
+blackjack-angular-rails
+=======================
 help from here: https://gorails.com/setup/ubuntu/13.04
 
 setting up rails 4 on ubuntu 12.04
